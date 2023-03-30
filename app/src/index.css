@@ -1,38 +1,61 @@
 body {
-  background-color: #eee;
-  display: flex;
-  font-family: 'Muli', sans-serif;
-}
-
-.contract, .existing-contracts {
-  margin: 20px;
-  display: inline-block;
-  padding: 40px;
-  border: 1px solid #ddd;
-  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+  background-color: #F6F6F6;
+  color: #333;
 }
 
 h1 {
-  margin: 10px;
-  padding: 10px;
-  border-bottom: 1px solid #eee;
+  font-size: 32px;
+  margin: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.contract, .existing-contracts {
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 40px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.contract:hover, .existing-contracts:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
 }
 
 label {
-  display: flex;
-  flex-direction: column;
+  display: block;
   text-transform: uppercase;
-  color: #aaa;
-  margin: 20px;
+  color: #666;
+  margin: 20px 0 10px 0;
+  font-size: 14px;
+  letter-spacing: 1px;
 }
 
 input[type="text"] {
-  padding: 6px;
+  padding: 10px;
   font-size: 18px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: none;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+input[type="text"]:hover,
+input[type="text"]:focus {
+  outline: none;
+  border-color: #F58427;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .button {
-  background-color: #f58427;
+  background-color: #1DA1F2; /* Twitter blue color */
   color: white;
   text-align: center;
   font-weight: bold;
@@ -44,27 +67,36 @@ input[type="text"] {
   cursor: pointer;
 }
 
-.existing-contract ul {
-  padding: 10px;
-  margin: 20px;
-  background-color: #eee;
+.button:hover {
+  background-color: #87CEFA;
 }
 
-.existing-contract ul > li {
+.existing-contracts ul {
+  padding: 10px;
+  margin: 20px;
+  background-color: #F6F6F6;
+  font-size: 14px;
+}
+
+.existing-contracts ul > li {
   list-style: none;
   display: flex;
   margin: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
 }
 
-.existing-contract ul > li > div {
-  margin: 0 5px;
+.existing-contracts ul > li > div {
+  margin: 0 10px;
+  flex: 1;
 }
 
-.existing-contract ul > li > :first-child {
+.existing-contracts ul > li > :first-child {
   font-weight: bold;
+  flex-basis: 20%;
 }
 
-.existing-contract .complete {
-  color: #5aa75a;
+.existing-contracts .complete {
+  color: #5AA75A;
   text-align: center;
 }
